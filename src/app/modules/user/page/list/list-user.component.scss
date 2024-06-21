@@ -1,0 +1,17 @@
+.btn-edit{
+    fill: #FFF;
+    transition: .5s;
+    border-radius: 100% !important;
+    padding: 6px;
+    width: 30px;
+    svg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.img-circle{
+    height: 8rem;
+    width: 8rem;
+    object-fit: cover;
+}

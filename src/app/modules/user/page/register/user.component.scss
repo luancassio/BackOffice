@@ -1,0 +1,16 @@
+.required-field::after{
+    content: '*';
+    color: #db0404;
+
+}
+.btn-upload{
+    svg{
+        fill: #007bff !important;
+    }
+}
+.btn-upload:hover{
+    svg{
+        fill: #fff !important;
+        transition: .5s !important;
+    }
+}

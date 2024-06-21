@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "name": "João Silva",
+      "email": "joao@example.com",
+      "password": "senha123",
+      "active": true,
+      "img": "https://images.unsplash.com/photo-1576558656222-ba66febe3dec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "1"
+    },
+    {
+      "name": "Maria Souza",
+      "email": "maria@example.com",
+      "password": "segredo456",
+      "active": true,
+      "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "2"
+    },
+    {
+      "name": "Ana Oliveira",
+      "email": "ana@example.com",
+      "password": "minhasenha",
+      "active": true,
+      "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "3"
+    },
+    {
+      "name": "Carlos Santos",
+      "email": "carlos@example.com",
+      "password": "senhasecreta",
+      "active": true,
+      "img": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "4"
+    },
+    {
+      "name": "Juliana Pereira",
+      "email": "juliana@example.com",
+      "password": "12345678",
+      "active": false,
+      "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "5"
+    },
+    {
+      "email": "pedro@example.com",
+      "name": "Pedro Costa",
+      "password": "minhasenhasegura",
+      "active": false,
+      "img": "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "6"
+    }
+  ]
+}

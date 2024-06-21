@@ -1,0 +1,89 @@
+<div class="content-wrapper" style="min-height: 1345.31px;">
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Cadastro de Usuário</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <form [formGroup]="formUser">
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="card card-default">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                    <img src="assets/img/user1-128x128.jpg" width="125" alt="user-avatar" class="img-circle img-fluid">
+                    <button class="btn btn-sm btn-outline-primary mt-3 btn-upload" data-toggle="tooltip" data-placement="bottom" title="Upload não está implementado :/">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                          svg {
+                            fill: #ffffff
+                          }
+                        </style>
+                        <path
+                          d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z" />
+                      </svg>
+                      Upload
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="card card-default">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label class="required-field">Nome</label>
+                      <input type="text" class="form-control" placeholder="Digite seu nome" required
+                        formControlName="name">
+                      <ng-container *ngIf="name?.touched && name?.errors">
+                        <span style="color: #f44336; font-size: 75%;font-weight: normal;" class="mensagemError">
+                          É obrigatório informar o <strong>nome</strong>
+                        </span>
+                      </ng-container>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label class="required-field">Email</label>
+                      <input type="text" class="form-control" placeholder="Email" required formControlName="email">
+                      <ng-container *ngIf="email?.touched && email?.errors">
+                        <span *ngIf="name?.hasError('required')" style="color: #f44336; font-size: 75%;font-weight: normal;" class="mensagemError">
+                          É obrigatório informar o um <strong>e-mail</strong> válido
+                        </span>
+                      </ng-container>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label class="required-field">Senha</label>
+                      <input type="password" class="form-control" placeholder="Senha" required formControlName="password">
+                      <ng-container *ngIf="password?.touched && password?.errors">
+                        <span style="color: #f44336; font-size: 75%;font-weight: normal;" class="mensagemError">
+                          É obrigatório informar o <strong>Senha</strong>
+                        </span>
+                      </ng-container>
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+              <button (click)="submit()" class="btn btn-sm btn-outline-dark mt-3 btn-upload" [disabled]="!formUser.valid" type="submit">
+                Cadastrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+</div>

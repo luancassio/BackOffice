@@ -1,0 +1,67 @@
+<div class="content-wrapper" style="min-height: 1604.44px;">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Lista de Usuários</h1>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+
+    <!-- Default box -->
+    <div class="card card-solid">
+      <div class="card-body pb-0">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column" *ngFor="let user of users$ | async">
+            <div class="card bg-light d-flex flex-fill">
+ 
+              <div class="card-body pt-3">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="lead"><b>{{user.name}}</b></h2>
+                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                      <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Email: {{user.email}}</li>
+                      <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
+                    </ul>
+                  </div>
+                  <div class="col-5 text-center">
+                    <img [src]="setImage(user.img)" alt="user-avatar" class="img-circle img-fluid" height="128" width="128">
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="text-right">
+                    <ng-toggle 
+                    [height]="23"
+                    [width]="71"
+                    [value]="user.active"
+                    [color]="{
+                      unchecked: '#939da2',
+                      checked: '#f62d51'
+                    }"
+                    [labels]="{checked: 'Ativo', unchecked: 'Inativo'}"
+                    [color]="{checked: '#28a745',unchecked: '#dc3545'}"
+                    [switchColor]="{checked: '#e1e1e1',unchecked: '#e1e1e1'}"
+                    [fontSize]="12"
+                    (change)="updateStatus(user)"
+      
+                  ></ng-toggle>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+
+  </section>
+  <!-- /.content -->
+</div>

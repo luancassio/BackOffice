@@ -1,0 +1,44 @@
+<section class="vh-100 login-page">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="assets/img/login-img.webp"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 text-black">
+                <form [formGroup]="authForm">
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <img src="assets/img/back-office-logo.png" alt="Logomarca da empresa">
+                  </div>
+
+                  <h5 class="fw-normal pb-3 text-center" style="letter-spacing: 1px;">Faça login em sua conta</h5>
+
+                  <div class="form-outline mb-4">
+                    <input type="email" id="email" class="form-control form-control-lg" formControlName="email"/>
+                    <label class="form-label" for="email">Email</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" id="password" class="form-control form-control-lg" formControlName="password"/>
+                    <label class="form-label" for="password">Senha</label>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="button" (click)="singIn()" [disabled]="!authForm.valid">Entra</button>
+                  </div>
+
+                  <a class="small text-muted" >Esqueceu sua senha?</a>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
